@@ -12,3 +12,4 @@
   new f() instanceof f;// false
   
   14.  with (function(x, undefined){}) length;//2
+  15. for(i=0, j=0; i<10, j<6; i++, j++){  k = i + j; }//10
