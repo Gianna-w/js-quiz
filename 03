@@ -1,0 +1,14 @@
+11.  (function(foo){
+    return typeof foo.bar;
+  })({ foo: { bar: 1 } });//"undefined"
+  
+  12.  (function f(){
+    function f(){ return 1; }
+    return f();
+    function f(){ return 2; }
+  })();//2
+  
+  13.  function f(){ return f; }
+  new f() instanceof f;// false
+  
+  14.  with (function(x, undefined){}) length;//2
