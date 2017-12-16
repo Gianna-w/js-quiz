@@ -1,0 +1,25 @@
+  6.var foo = {
+    bar: function() { return this.baz; },
+    baz: 1
+  };
+  (function(){
+    return typeof arguments[0]();
+  })(foo.bar);// "undefined"
+  
+  7.  var foo = {
+    bar: function(){ return this.baz; },
+    baz: 1
+  }
+  typeof (f = foo.bar)();// "undefined"
+  
+  8.  var f = (function f(){ return "1"; }, function g(){ return 2; })();
+  typeof f;//"number"
+  
+  9.  var x = 1;
+  if (function f(){}) {
+    x += typeof f;
+  }
+  x;// "1undefined"
+  
+  10.  var x = [typeof x, typeof y][1];
+  typeof typeof x;// "string"
